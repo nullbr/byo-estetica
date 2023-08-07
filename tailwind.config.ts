@@ -8,6 +8,22 @@ const config: Config = {
         green: { 500: "#62bb9a", 600: "#4fae8f" },
         gold: { 500: "#edce87", 600: "#e0b75d" },
       },
+      animation: {
+        "fade-in": "fade-in 3s ease-in-out forwards",
+      },
+      keyframes: {
+        "fade-in": {
+          "0%": {
+            opacity: "0%",
+          },
+          "75%": {
+            opacity: "0%",
+          },
+          "100%": {
+            opacity: "100%",
+          },
+        },
+      },
     },
     fontFamily: {
       body: [

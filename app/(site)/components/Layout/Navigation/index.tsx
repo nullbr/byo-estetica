@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
+import { CloseIcon, HamburgerIcon } from "../../Shared/Icons";
 
 const Navigation = () => {
   const pages = [
@@ -71,42 +72,44 @@ const Navigation = () => {
             onClick={() => setOpenNav(!openNav)}
           >
             <span className="sr-only">Abrir menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
+            {openNav ? <CloseIcon /> : <HamburgerIcon cls="-scale-x-100" />}
           </button>
+
+          {/* links */}
+          <ul className="hidden md:flex font-medium text-end rounded-lg space-x-8">
+            {pages.map((page, idx) => (
+              <li key={idx}>
+                <Link
+                  href={page.path}
+                  className={`rounded capitalize hover:scale-105 hover:text-green-600 ${
+                    path === page.path ? "text-green-500" : "text-gray-500"
+                  }`}
+                >
+                  {page.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </nav>
 
       <aside
         ref={menuRef}
-        className={`fixed left-0 top-20 md:top-6 z-50 w-full md:w-auto px-4 transition-transform md:translate-y-0 ${
+        className={`md:hidden fixed top-20 z-50 w-full px-4 transition-transform ${
           openNav ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className="font-medium flex flex-col text-end p-4 md:p-0 border border-gray-100 rounded-lg bg-white md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-transparent">
+        <ul className="font-medium flex flex-col text-end p-4 border border-gray-100 rounded-lg bg-white">
           {pages.map((page, idx) => {
             return (
               <li key={idx}>
                 <Link
                   href={page.path}
-                  className={`block py-2 pl-3 pr-4 rounded md:p-0 capitalize ${
+                  className={`block py-2 pl-3 pr-4 rounded capitalize ${
                     path === page.path
-                      ? "text-white bg-green-500 md:text-green-500 md:bg-transparent"
+                      ? "text-white bg-green-500"
                       : "text-gray-500"
-                  }}`}
+                  }`}
                 >
                   {page.title}
                 </Link>
