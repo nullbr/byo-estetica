@@ -68,7 +68,7 @@ const Navigation = () => {
           <button
             type="button"
             ref={buttonRef}
-            className="inline-flex items-center p-2 m-4 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+            className="inline-flex items-center p-2 m-4 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:outline-none hover:ring-2 hover:ring-gray-200"
             onClick={() => setOpenNav(!openNav)}
           >
             <span className="sr-only">Abrir menu</span>
