@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "./components/Layout/Analytics";
 import Navigation from "./components/Layout/Navigation";
+import Footer from "./components/Layout/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -60,12 +61,15 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`min-h-[200svh] bg-slate-50 max-w-3xl mx-auto ${
+        className={`bg-slate-50 max-w-3xl mx-auto ${
           process.env.NODE_ENV === "development" ? "debug-screens" : ""
         }`}
       >
         <Navigation />
-        <main className="pt-20 px-4">{children}</main>
+
+        <main>{children}</main>
+
+        <Footer />
       </body>
     </html>
   );

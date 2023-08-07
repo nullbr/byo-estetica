@@ -10,7 +10,7 @@ const Navigation = () => {
   const pages = [
     { title: "início", path: "/" },
     { title: "sobre", path: "/sobre" },
-    { title: "serviços", path: "/serviços" },
+    { title: "serviços", path: "/servicos" },
     { title: "contato", path: "/contato" },
   ];
 
@@ -76,7 +76,7 @@ const Navigation = () => {
           </button>
 
           {/* links */}
-          <ul className="hidden md:flex font-medium text-end rounded-lg space-x-8">
+          <ul className="hidden md:flex font-medium text-end rounded-lg space-x-8 px-4">
             {pages.map((page, idx) => (
               <li key={idx}>
                 <Link
