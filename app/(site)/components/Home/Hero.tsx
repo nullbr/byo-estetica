@@ -4,8 +4,8 @@ import { ArrowIcon, InstagramIcon } from "../Shared/Icons";
 
 function Hero() {
   return (
-    <section className="h-[100svh] pt-20 w-full bg-gradient-to-tl from-pink-200 via-purple-100 to-blue-200 flex justify-center text-center flex-col md:flex-row">
-      <div className="container-hero">
+    <section className="h-[100svh] w-full bg-gradient-to-tl from-pink-200 via-purple-100 to-blue-200 flex justify-center text-center flex-col md:flex-row">
+      <div>
         {/* hero section */}
         <div className="animate-fade-in flex flex-col text-gray-400 justify-center text-center h-full px-20 gap-20">
           <Image
@@ -20,7 +20,7 @@ function Hero() {
           <div className="flex w-full justify-center">
             <Link
               href="/servicos"
-              className="inline-flex items-center gap-2 uppercase font-bold tracking-widest border-2 border-gold-600 rounded-full p-4 text-gold-600"
+              className="inline-flex items-center gap-2 uppercase font-bold tracking-widest border-2 border-gold-600 rounded-full p-4 text-gold-600 text-sm md:text-base whitespace-nowrap hover:scale-105 transition-transform"
             >
               nossos serviços
               <ArrowIcon cls="w-5 h-5" />
@@ -33,8 +33,7 @@ function Hero() {
         href="https://www.instagram.com/byoestetica/"
         target="_blank"
         rel="noopener noreferrer"
-        className="animate-fade-in flex flex-row-reverse md:-rotate-90 w-fit
-          md:absolute top-1/2 right-0 items-center rotate-0 static self-center pt-10 md:pt-0 text-gray-400 gap-4"
+        className="animate-fade-in flex flex-row-reverse md:-rotate-90 w-fit md:absolute top-1/2 right-0 items-center rotate-0 static self-center pt-10 md:pt-0 text-gray-400 gap-4 hover:scale-105 transition-transform"
       >
         <p className="uppercase md:text-2xl font-bold tracking-widest">
           siga-nos

@@ -13,9 +13,9 @@ function Footer() {
   ];
 
   return (
-    <footer className="max-w-3xl mx-auto p-4 flex flex-col sm:flex-row gap-4 text-sm sm:text-base text-gray-700 items-center sm:items-start">
+    <footer className="max-w-3xl mx-auto px-4 py-8 flex flex-col sm:flex-row gap-4 text-sm sm:text-base text-gray-700 items-center sm:items-start">
       {/* logo side */}
-      <div className="flex-1 flex flex-col gap-4 items-center sm:items-start">
+      <div className="flex-1 flex flex-col gap-4 items-center sm:items-start text-center md:text-left">
         <Link href="/">
           <Image
             src="/images/navigation/logo-nav.png"
@@ -24,7 +24,12 @@ function Footer() {
             height={40}
           />
         </Link>
-        <p>description</p>
+        <p>
+          Clínica BYO Estética Avançada é uma empresa prestadora de serviços que
+          oferece tratamentos rápidos ou terapêuticos que objetivam a
+          reabilitação ou melhora estética e da saúde dos clientes, por meio da
+          aplicação de cosméticos e de terapias diversas.
+        </p>
         <p>
           Copyright | © {new Date().getFullYear()} BYO Estética Avançada
           <br />

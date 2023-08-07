@@ -58,8 +58,8 @@ const Navigation = () => {
           <Link href="/" className="p-4">
             <Image
               src="/images/navigation/logo-nav.png"
-              width={115}
-              height={40}
+              width={100}
+              height={30}
               alt="logo-nav"
             />
           </Link>
@@ -95,7 +95,7 @@ const Navigation = () => {
 
       <aside
         ref={menuRef}
-        className={`md:hidden fixed top-20 z-50 w-full px-4 transition-transform ${
+        className={`md:hidden fixed top-16 z-50 w-full px-4 transition-transform ${
           openNav ? "translate-x-0" : "translate-x-full"
         }`}
       >
