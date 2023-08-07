@@ -17,7 +17,7 @@ const config: Config = {
             opacity: "0%",
           },
           "75%": {
-            opacity: "0%",
+            opacity: "50%",
           },
           "100%": {
             opacity: "100%",

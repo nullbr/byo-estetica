@@ -61,7 +61,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`bg-slate-50 ${
+        className={`bg-white ${
           process.env.NODE_ENV === "development" ? "debug-screens" : ""
         }`}
       >
