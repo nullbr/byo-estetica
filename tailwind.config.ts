@@ -9,15 +9,12 @@ const config: Config = {
         gold: { 500: "#edce87", 600: "#e0b75d" },
       },
       animation: {
-        "fade-in": "fade-in 3s ease-in-out forwards",
+        "fade-in": "fade-in 2s ease-in-out forwards",
       },
       keyframes: {
         "fade-in": {
           "0%": {
             opacity: "0%",
-          },
-          "75%": {
-            opacity: "50%",
           },
           "100%": {
             opacity: "100%",
