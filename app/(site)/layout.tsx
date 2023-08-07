@@ -60,7 +60,7 @@ export default function RootLayout({
       </head>
 
       <body
-        className={`min-h-[100svh] bg-slate-50 max-w-3xl mx-auto ${
+        className={`min-h-[200svh] bg-slate-50 max-w-3xl mx-auto ${
           process.env.NODE_ENV === "development" ? "debug-screens" : ""
         }`}
       >
