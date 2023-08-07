@@ -1,7 +1,8 @@
 import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import { Analytics } from "./components/Analytics";
+import { Analytics } from "./components/Layout/Analytics";
+import Navigation from "./components/Layout/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -63,6 +64,7 @@ export default function RootLayout({
           process.env.NODE_ENV === "development" ? "debug-screens" : ""
         }`}
       >
+        <Navigation />
         <main className="pt-20 px-4">{children}</main>
       </body>
     </html>
