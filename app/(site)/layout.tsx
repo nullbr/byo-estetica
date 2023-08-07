@@ -1,6 +1,7 @@
 import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import { Analytics } from "./components/Analytics";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,8 +53,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR" className={inter.className}>
+      <head>
+        <Analytics />
+      </head>
+
+      <body
+        className={`min-h-[100svh] bg-slate-50 max-w-3xl mx-auto ${
+          process.env.NODE_ENV === "development" ? "debug-screens" : ""
+        }`}
+      >
+        <main className="pt-20 px-4">{children}</main>
+      </body>
     </html>
   );
 }
