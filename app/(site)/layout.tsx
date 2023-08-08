@@ -27,7 +27,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://byo-estetica.vercel.app/"),
   openGraph: {
     title: "BYO Estética Avançada",
-    description: "Bruno Leite - Full Stack Developer",
+    description:
+      "Clínica BYO Estética avançada é uma empresa prestadora de serviços que oferece tratamentos rápidos ou terapêuticos que objetivam a reabilitação ou melhora estética e da saúde dos clientes, por meio da aplicação de cosméticos e de terapias diversas",
     url: "https://byo-estetica.vercel.app",
     siteName: "byo-estetica.vercel.app",
     images: [
