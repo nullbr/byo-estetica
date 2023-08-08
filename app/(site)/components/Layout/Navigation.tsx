@@ -74,7 +74,7 @@ const Navigation = () => {
             onClick={() => setOpenNav(!openNav)}
           >
             <span className="sr-only">Abrir menu</span>
-            {openNav ? <CloseIcon /> : <HamburgerIcon cls="-scale-x-100" />}
+            {openNav ? <CloseIcon /> : <HamburgerIcon />}
           </button>
 
           {/* links */}
