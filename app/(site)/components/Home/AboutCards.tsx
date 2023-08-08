@@ -28,13 +28,15 @@ const AboutCards = () => {
         {aboutCards.map((card, idx) => (
           <div
             key={idx}
-            className="flex flex-col bg-white gap-4 justify-center p-6 items-center rounded-tl-[3rem] rounded-br-[3rem] shadow-xl w-full min-h-[10rem]  md:min-h-[10rem] -mt-20"
+            className="flex flex-col md:flex-row bg-white gap-4 justify-center p-6 items-center rounded-tl-[3rem] rounded-br-[3rem] shadow-xl w-full min-h-[10rem]  md:min-h-[10rem] -mt-20"
           >
             <Image src={card.img} alt="box_img" height={100} width={100} />
-            <h1 className="text-green-500 md:text-lg font-bold uppercase">
-              {card.title}
-            </h1>
-            <p className="leading-2">{card.description}</p>
+            <div>
+              <h1 className="text-green-500 md:text-lg font-bold uppercase pb-4">
+                {card.title}
+              </h1>
+              <p className="leading-2">{card.description}</p>
+            </div>
           </div>
         ))}
       </div>

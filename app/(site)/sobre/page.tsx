@@ -1,4 +1,10 @@
+import AboutHero from "../components/About/AboutHero";
+
 const Sobre = () => {
-  return <div className="pt-20 page-padding text-center">Sobre</div>;
+  return (
+    <article>
+      <AboutHero />
+    </article>
+  );
 };
 export default Sobre;

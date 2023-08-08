@@ -1,11 +1,20 @@
 import "../globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import LocalFont from "next/font/local";
 import { Analytics } from "./components/Layout/Analytics";
 import Navigation from "./components/Layout/Navigation";
 import Footer from "./components/Layout/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const calSans = LocalFont({
+  src: "../../public/fonts/CalSans-SemiBold.ttf",
+  variable: "--font-calsans",
+});
 
 export const metadata: Metadata = {
   title: {
@@ -55,7 +64,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="pt-BR" className={inter.className}>
+    <html lang="pt-BR" className={[inter.variable, calSans.variable].join(" ")}>
       <head>
         <Analytics />
       </head>

@@ -81,6 +81,7 @@ const Navigation = () => {
               <li key={idx}>
                 <Link
                   href={page.path}
+                  onClick={() => setOpenNav(false)}
                   className={`rounded capitalize hover:scale-105 hover:text-green-600 ${
                     path === page.path ? "text-green-500" : "text-gray-500"
                   }`}
@@ -105,6 +106,7 @@ const Navigation = () => {
               <li key={idx}>
                 <Link
                   href={page.path}
+                  onClick={() => setOpenNav(false)}
                   className={`block py-2 pl-3 pr-4 rounded capitalize ${
                     path === page.path
                       ? "text-white bg-green-500"
