@@ -8,23 +8,23 @@ function Hero() {
       <div className="h-[100svh] w-full flex justify-center text-center flex-col md:flex-row">
         <div>
           {/* hero section */}
-          <div className="animate-fade-in flex flex-col text-gray-400 justify-center text-center h-full px-20 gap-20">
+          <div className="animate-fade-in flex flex-col text-gray-400 justify-center text-center h-full px-10 gap-10">
             <Image
               src="/images/home/hero-logo.png"
               height={400}
               width={400}
               alt="text_bg"
-              className="max-w-full w-auto h-auto sm:max-h-[40vh] max-h-full"
+              className="w-auto h-auto"
               priority={true}
             />
 
             <div className="flex w-full justify-center">
               <Link
                 href="/servicos"
-                className="inline-flex items-center gap-2 uppercase font-bold tracking-widest border-2 border-gold-600 rounded-full p-4 text-gold-600 text-sm md:text-base whitespace-nowrap hover:scale-105 transition-transform"
+                className="inline-flex items-center gap-2 uppercase font-bold tracking-widest border-2 border-gold-600 rounded-full p-3 text-gold-600 text-sm md:text-base whitespace-nowrap hover:scale-105 transition-transform"
               >
                 nossos serviços
-                <ArrowIcon cls="w-5 h-5" />
+                <ArrowIcon cls="w-4 h-4" />
               </Link>
             </div>
           </div>

@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { usePathname } from "next/navigation";
-import { CloseIcon, HamburgerIcon } from "../../Shared/Icons";
+import { CloseIcon, HamburgerIcon } from "../Shared/Icons";
 
 const Navigation = () => {
   const pages = [
@@ -61,6 +61,7 @@ const Navigation = () => {
               width={100}
               height={30}
               alt="logo-nav"
+              className="w-auto h-auto"
             />
           </Link>
 

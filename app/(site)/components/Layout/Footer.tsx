@@ -22,6 +22,7 @@ function Footer() {
             alt="footer-logo"
             width={115}
             height={40}
+            className="w-auto h-auto"
           />
         </Link>
         <p>
