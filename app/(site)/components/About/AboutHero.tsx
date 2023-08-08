@@ -8,7 +8,7 @@ const AboutHero = () => {
         <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 min-h-[100svh] md:min-h-0 pt-20 md:pt-44">
           <div>
             <h1 className="text-green-500 font-bold text-sm md:text-base uppercase tracking-wide">
-              Sobre <span>BYO</span>
+              Sobre BYO
             </h1>
             <p className="text-gray-700 pt-4 text-lg md:text-xl max-w-sm">
               A Clínica BYO Estética Avançada é o lugar onde você encontra

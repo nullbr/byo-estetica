@@ -1,4 +1,15 @@
+import ContactHero from "../components/Contact/ContactHero";
+import Form from "../components/Contact/Form";
+
 const Contato = () => {
-  return <div className="pt-20 page-padding text-center">Contato</div>;
+  return (
+    <section>
+      {/* left div */}
+      <ContactHero />
+
+      {/* right div */}
+      <Form />
+    </section>
+  );
 };
 export default Contato;
