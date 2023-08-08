@@ -5,6 +5,7 @@ import LocalFont from "next/font/local";
 import { Analytics } from "./components/Layout/Analytics";
 import Navigation from "./components/Layout/Navigation";
 import Footer from "./components/Layout/Footer";
+import FloatingButton from "./components/Layout/FloatingButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -79,6 +80,8 @@ export default function RootLayout({
         <main>{children}</main>
 
         <Footer />
+
+        <FloatingButton />
       </body>
     </html>
   );
