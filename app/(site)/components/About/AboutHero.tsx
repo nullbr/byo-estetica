@@ -5,7 +5,7 @@ const AboutHero = () => {
     <section className="bg-gradient-to-b to-[#bfb8ab] from-[#d9dad0]">
       <div className="page-padding">
         {/* text */}
-        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-4 min-h-[100svh] md:min-h-0 pt-20 md:pt-44">
+        <div className="flex flex-col md:flex-row justify-center md:justify-between items-center gap-6 min-h-[100svh] md:min-h-0 pt-44 pb-10">
           <div>
             <h1 className="text-green-500 font-bold text-sm md:text-base uppercase tracking-wide">
               Sobre BYO

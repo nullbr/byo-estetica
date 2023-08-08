@@ -52,16 +52,15 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 z-50 bg-white/500 border-gray-200 backdrop-blur">
+      <nav className="fixed inset-x-0 top-0 z-50 bg-white/500 border-gray-200 backdrop-blur md:py-2">
         <div className="max-w-3xl flex flex-wrap items-center justify-between mx-auto">
           {/* logo */}
-          <Link href="/" className="p-4">
+          <Link href="/" className="px-6 md:p-4">
             <Image
               src="/images/navigation/logo-nav.png"
-              width={100}
-              height={30}
+              width={90}
+              height={25}
               alt="logo-nav"
-              className="w-auto h-auto"
               priority={true}
             />
           </Link>
@@ -70,11 +69,15 @@ const Navigation = () => {
           <button
             type="button"
             ref={buttonRef}
-            className="inline-flex items-center p-2 m-4 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:outline-none hover:ring-2 hover:ring-gray-200"
+            className="inline-flex items-center p-2 m-4 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:outline-none hover:ring-2 hover:ring-gray-200"
             onClick={() => setOpenNav(!openNav)}
           >
             <span className="sr-only">Abrir menu</span>
-            {openNav ? <CloseIcon /> : <HamburgerIcon />}
+            {openNav ? (
+              <CloseIcon cls="w-7 h-7" />
+            ) : (
+              <HamburgerIcon cls="w-7 h-7" />
+            )}
           </button>
 
           {/* links */}

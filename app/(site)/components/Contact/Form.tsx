@@ -14,7 +14,7 @@ const Form = () => {
   }
 
   return (
-    <article className="bg-green-500 relative h-[25rem] md:h-[30rem]">
+    <article className="bg-green-500 relative h-[26rem] md:h-[35rem]">
       <div className="page-padding absolute w-full -top-20 translate-x-1/2 right-1/2 pb-20 md:px-20 text-white">
         <form
           className="bg-white px-6 py-10 md:py-20 rounded-xl shadow-xl"

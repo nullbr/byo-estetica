@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Founder = () => {
   return (
-    <section className="bg-orange-200 pt-32 pb-8">
+    <section className="bg-orange-200 pt-36 pb-20">
       <div className="page-padding flex flex-col md:flex-row justify-center md:justify-between items-center gap-4">
         <div>
           <h1 className="text-gold-600 font-bold text-sm md:text-base uppercase tracking-wide">
