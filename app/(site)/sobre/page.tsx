@@ -1,10 +1,13 @@
 import AboutHero from "../components/About/AboutHero";
+import Founder from "../components/About/Founder";
 
 const Sobre = () => {
   return (
-    <article>
+    <>
       <AboutHero />
-    </article>
+
+      <Founder />
+    </>
   );
 };
 export default Sobre;

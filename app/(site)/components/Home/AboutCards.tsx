@@ -23,12 +23,12 @@ const AboutCards = () => {
   ];
 
   return (
-    <section className="relative bg-slate-200 pb-8">
+    <section className="bg-slate-200 pb-8">
       <div className="page-padding flex flex-col gap-28 text-center text-gray-500">
         {aboutCards.map((card, idx) => (
           <div
             key={idx}
-            className="flex flex-col md:flex-row bg-white gap-4 justify-center p-6 items-center rounded-tl-[3rem] rounded-br-[3rem] shadow-xl w-full min-h-[10rem]  md:min-h-[10rem] -mt-20"
+            className="flex flex-col md:flex-row bg-white gap-4 justify-center p-6 items-center rounded-tl-[3rem] rounded-br-[3rem] shadow-xl w-full min-h-[10rem] md:min-h-[10rem] -mt-20"
           >
             <Image src={card.img} alt="box_img" height={100} width={100} />
             <div>
