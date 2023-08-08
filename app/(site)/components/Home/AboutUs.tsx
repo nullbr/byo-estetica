@@ -9,7 +9,7 @@ const AboutUs = () => {
           alt="sobre-nos"
           width={400}
           height={400}
-          className="rounded-full border border-white shadow-xl -mt-20"
+          className="w-auto h-auto max-w-[80%] md:max-w-full rounded-full border border-white shadow-xl -mt-20"
         />
         <p>Seja bem vindo(a),</p>
         <p>

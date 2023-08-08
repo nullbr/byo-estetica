@@ -23,6 +23,7 @@ function Footer() {
             width={115}
             height={40}
             className="w-auto h-auto"
+            priority={true}
           />
         </Link>
         <p>

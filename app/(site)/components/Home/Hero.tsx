@@ -14,7 +14,7 @@ function Hero() {
               height={400}
               width={400}
               alt="text_bg"
-              className="w-auto h-auto"
+              className="w-auto h-auto max-w-[80%] md:max-w-full mx-auto"
               priority={true}
             />
 

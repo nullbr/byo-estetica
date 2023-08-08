@@ -20,8 +20,8 @@ const Founder = () => {
         <Image
           src="/images/about/paloma.png"
           alt="sobre-nos"
-          width={200}
-          height={200}
+          width={300}
+          height={300}
           className="rounded-xl shadow-xl"
         />
       </div>

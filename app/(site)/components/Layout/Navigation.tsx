@@ -62,6 +62,7 @@ const Navigation = () => {
               height={30}
               alt="logo-nav"
               className="w-auto h-auto"
+              priority={true}
             />
           </Link>
 

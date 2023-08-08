@@ -22,13 +22,13 @@ const AboutHero = () => {
 
           <Image
             src="/images/about/logo.png"
-            width={200}
-            height={200}
+            width={300}
+            height={300}
             alt="logo"
           />
         </div>
         {/* box */}
-        <div className="relative bg-[#7f6754] md:mt-10 -mb-20 rounded-xl text-white p-4 pt-20 text-xl tracking-wide font-thin">
+        <div className="relative bg-[#7f6754] shadow-xl md:mt-10 -mb-20 rounded-xl text-white p-4 pt-20 text-xl tracking-wide font-thin">
           {/* mission statements */}
           <div className="py-6 border-b border-gold-500">
             <p className="max-w-sm">
