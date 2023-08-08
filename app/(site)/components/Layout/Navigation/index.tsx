@@ -52,7 +52,7 @@ const Navigation = () => {
 
   return (
     <>
-      <nav className="fixed inset-x-0 top-0 z-40 bg-white/500 border-gray-200 backdrop-blur">
+      <nav className="fixed inset-x-0 top-0 z-50 bg-white/500 border-gray-200 backdrop-blur">
         <div className="max-w-3xl flex flex-wrap items-center justify-between mx-auto">
           {/* logo */}
           <Link href="/" className="p-4">
@@ -95,11 +95,11 @@ const Navigation = () => {
 
       <aside
         ref={menuRef}
-        className={`md:hidden fixed top-16 z-50 w-full px-4 transition-transform ${
+        className={`md:hidden fixed top-0 z-40 w-full transition-transform duration-300 h-[100svh] ${
           openNav ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ul className="font-medium flex flex-col text-end p-4 border border-gray-100 rounded-lg bg-white">
+        <ul className="font-medium flex flex-col text-end p-4 pt-20 border border-gray-100 bg-white h-full">
           {pages.map((page, idx) => {
             return (
               <li key={idx}>

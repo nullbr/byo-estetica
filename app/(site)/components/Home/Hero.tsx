@@ -10,7 +10,7 @@ function Hero() {
           {/* hero section */}
           <div className="animate-fade-in flex flex-col text-gray-400 justify-center text-center h-full px-20 gap-20">
             <Image
-              src="/images/hero/hero-logo.png"
+              src="/images/home/hero-logo.png"
               height={400}
               width={400}
               alt="text_bg"
