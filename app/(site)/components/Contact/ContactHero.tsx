@@ -35,12 +35,12 @@ const ContactHero = () => {
             </Link>
 
             <Link
-              href="mailto:email@byo.com"
+              href="mailto:contato@byoestetica.com.br"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline text-gray-500"
             >
-              email@byo.com
+              contato@byoestetica.com.br
             </Link>
           </div>
 
