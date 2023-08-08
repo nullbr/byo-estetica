@@ -1,4 +1,10 @@
-const Servicos = () => {
-  return <div className="pt-20 page-padding text-center">Servicos</div>;
+import Services from "../components/Services/Services";
+
+const page = () => {
+  return (
+    <>
+      <Services />
+    </>
+  );
 };
-export default Servicos;
+export default page;

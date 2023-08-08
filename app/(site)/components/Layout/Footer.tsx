@@ -13,7 +13,7 @@ function Footer() {
   ];
 
   return (
-    <footer className="page-padding py-8 flex flex-col sm:flex-row gap-4 text-sm sm:text-base text-gray-700 items-center sm:items-start">
+    <footer className="page-padding py-20 flex flex-col sm:flex-row gap-4 text-sm sm:text-base text-gray-700 items-center sm:items-start">
       {/* logo side */}
       <div className="flex-1 flex flex-col gap-4 items-center sm:items-start text-center md:text-left">
         <Link href="/">

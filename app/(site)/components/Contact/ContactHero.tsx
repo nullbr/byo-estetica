@@ -8,8 +8,8 @@ import {
 
 const ContactHero = () => {
   return (
-    <article className="bg-gradient-to-b to-slate-600 from-slate-200">
-      <div className="page-padding pt-44 pb-32 text-white text-center">
+    <article className="bg-gradient-to-b to-[#bfb8ab] from-[#d9dad0]">
+      <div className="page-padding pt-44 pb-32 text-gray-600 text-center">
         <h1 className="text-green-600 font-bold text-sm md:text-base uppercase tracking-wide pb-4">
           contate-nos
         </h1>
@@ -29,7 +29,7 @@ const ContactHero = () => {
               href={`https://wa.me/11995001307?text=Ol%C3%A1%21+gostaria+de+agendar+uma+visita.`}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-gray-200"
+              className="hover:underline text-gray-500"
             >
               <p>(11) 99500-1307</p>
             </Link>
@@ -38,7 +38,7 @@ const ContactHero = () => {
               href="mailto:email@byo.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-gray-200"
+              className="hover:underline text-gray-500"
             >
               email@byo.com
             </Link>
@@ -53,7 +53,7 @@ const ContactHero = () => {
               href="https://www.google.com/maps/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-gray-200"
+              className="hover:underline text-gray-500"
             >
               Av. Bandeirantes, 999 <br /> São Roque - SP
             </Link>
@@ -78,7 +78,7 @@ const ContactHero = () => {
               href="https://www.instagram.com/byoestetica/"
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:underline text-gray-200"
+              className="hover:underline text-gray-500"
             >
               byoestetica
             </Link>
