@@ -58,7 +58,7 @@ const Navigation = () => {
           <Link href="/" className="px-6 md:p-4">
             <Image
               src="/images/navigation/logo-nav.png"
-              width={90}
+              width={74.286}
               height={25}
               alt="logo-nav"
               priority={true}

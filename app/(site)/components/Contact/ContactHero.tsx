@@ -20,13 +20,27 @@ const ContactHero = () => {
           informações sobre nossos serviços.
         </p>
 
-        <div className="grid grid-cols-2 gap-2 pt-6 text-center">
+        <div className="flex flex-wrap justify-center gap-4 sm:gap-6 pt-6 text-center">
+          <div>
+            <InstagramIcon cls="w-7 h-7 text-green-600 mx-auto my-2" />
+
+            <p className="sr-only">siga-nos</p>
+            <Link
+              href="https://www.instagram.com/byoestetica/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:underline text-gray-500"
+            >
+              @byoestetica
+            </Link>
+          </div>
+
           <div>
             <PhoneIcon cls="w-6 h-6 text-green-600 mx-auto my-2" />
 
             <p className="sr-only">contato</p>
             <Link
-              href={`https://wa.me/11995001307?text=Ol%C3%A1%21+gostaria+de+agendar+uma+visita.`}
+              href={`https://wa.me/+5511995001307?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+visita.`}
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline text-gray-500"
@@ -50,12 +64,14 @@ const ContactHero = () => {
             <p className="sr-only">endereço</p>
 
             <Link
-              href="https://www.google.com/maps/"
+              href="https://goo.gl/maps/oPjnHkFVRnwovuBk8"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline text-gray-500"
             >
-              Av. Bandeirantes, 999 <br /> São Roque - SP
+              Av. Bandeirantes 417,
+              <br />
+              Sala 4, São Roque - SP
             </Link>
           </div>
 
@@ -64,24 +80,15 @@ const ContactHero = () => {
 
             <p className="sr-only">horários</p>
 
-            <p>Terça - Sábado:</p>
-            <p>9:00 - 18:00</p>
-
-            <p>Domingo: Fechado</p>
-          </div>
-
-          <div>
-            <InstagramIcon cls="w-7 h-7 text-green-600 mx-auto my-2" />
-
-            <p className="sr-only">siga-nos</p>
-            <Link
-              href="https://www.instagram.com/byoestetica/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline text-gray-500"
-            >
-              byoestetica
-            </Link>
+            <p className="text-gray-500">
+              Seg - Sexta:
+              <br />
+              9:00 - 19:30
+              <br />
+              Sábado: 9:00 - 14:00
+              <br />
+              Domingo: Fechado
+            </p>
           </div>
         </div>
       </div>

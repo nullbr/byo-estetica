@@ -7,7 +7,7 @@ const Services = () => {
     {
       title: "Limpeza de Pele",
       description:
-        "em como objetivo remover os cravos e as impurezas, desobstrui os poros e melhorar a capacidade de absorção da pele.",
+        "O objetivo principal é remover os cravos e as impurezas, desobstrui os poros e melhorar a capacidade de absorção da pele.",
       img: "/images/services/limpeza-facial.png",
     },
     {
@@ -69,8 +69,9 @@ const Services = () => {
                 src={service.img}
                 alt={service.title}
                 width={300}
-                height={150}
-                className="rounded-lg bg-gray-200"
+                height={200}
+                className="rounded-lg bg-gray-200 shadow-xl w-[300px] h-[200px]"
+                priority={false}
               />
               <div className="border-b border-gold-500 pb-10 md:border-none md:p-0">
                 <h2 className="text-xl font-medium text-gold-500">

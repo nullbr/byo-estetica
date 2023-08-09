@@ -43,7 +43,7 @@ const FloatingButton = () => {
         onMouseLeave={() => {
           setText(null);
         }}
-        href={`https://wa.me/11995001307?text=Ol%C3%A1%21+gostaria+de+agendar+uma+visita.`}
+        href={`https://wa.me/+5511995001307?text=Ol%C3%A1%21+Gostaria+de+agendar+uma+visita.`}
         target="_blank"
         rel="noopener noreferrer"
         className="flex items-center gap-2 rounded-full ease-in-out duration-500 hover:bg-white hover:shadow-lg hover:pl-4 transition text-gray-500 group"

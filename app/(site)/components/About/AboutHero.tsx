@@ -25,6 +25,7 @@ const AboutHero = () => {
             width={300}
             height={300}
             alt="logo"
+            className="w-[300px] h-[300px]"
           />
         </div>
         {/* box */}

@@ -5,7 +5,7 @@ import { ArrowIcon, InstagramIcon } from "../Shared/Icons";
 function Hero() {
   return (
     <section className="bg-gradient-to-tl from-green-100 via-slate-100 to-blue-200 pb-[5.5rem]">
-      <div className="h-[100svh] w-full flex justify-center text-center flex-col md:flex-row">
+      <div className="min-h-[100svh] w-full flex justify-center text-center flex-col md:flex-row py-36 md:py-20">
         <div>
           {/* hero section */}
           <div className="animate-fade-in flex flex-col text-gray-400 justify-center text-center h-full px-10 gap-10">
