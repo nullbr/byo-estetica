@@ -30,10 +30,15 @@ const Form = () => {
       return;
     }
 
+    let no_phone = null;
+    if (phone === "") {
+      no_phone = "Não informado";
+    }
+
     const params = {
       name,
       email,
-      phone_number: phone,
+      phone_number: no_phone || phone,
       message,
       "g-recaptcha-response": token,
     };
