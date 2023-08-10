@@ -42,6 +42,8 @@ const Form = () => {
         ({ status }) => {
           if (status === 200) {
             setLoading(false);
+
+            toast.success("Mensagem enviada com sucesso!");
           } else {
             console.log(status);
 
