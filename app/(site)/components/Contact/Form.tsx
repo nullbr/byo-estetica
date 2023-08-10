@@ -2,23 +2,65 @@
 
 import { useState } from "react";
 import { ArrowIcon } from "../Shared/Icons";
+import { Toaster, toast } from "react-hot-toast";
+import emailjs from "emailjs-com";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const Form = () => {
+  const [showCaptcha, setShowCaptcha] = useState(false);
+  const [loading, setLoading] = useState(false);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
-  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+  const submitFormAndShowCaptcha = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setShowCaptcha(true);
+  };
+
+  function handleSubmit(token: string | null) {
+    setShowCaptcha(false);
+    setLoading(true);
+
+    if (name === "" || email === "" || message === "") {
+      toast.error("Por favor, preencha os de email, nome e mensagem");
+      return;
+    }
+
+    const params = {
+      name,
+      email,
+      phone_number: phone,
+      message,
+      "g-recaptcha-response": token,
+    };
+
+    emailjs
+      .send("service_bvhqapb", "template_gyweosm", params, "ueUa3HtzP6zaHrXLB")
+      .then(
+        ({ status }) => {
+          if (status === 200) {
+            setLoading(false);
+          } else {
+            console.log(status);
+
+            toast.error("Erro ao enviar mensagem, tente novamente mais tarde");
+          }
+        },
+        (err) => {
+          console.log(err);
+          toast.error("Erro ao enviar mensagem, tente novamente mais tarde");
+        }
+      );
   }
 
   return (
     <article className="bg-green-500 relative h-[26rem] md:h-[35rem]">
       <div className="page-padding absolute w-full -top-20 translate-x-1/2 right-1/2 pb-20 md:px-20 text-white">
         <form
-          className="bg-white px-6 py-10 md:py-20 rounded-xl shadow-xl"
-          onSubmit={handleSubmit}
+          className="bg-white px-6 py-10 md:py-20 rounded-xl shadow-xl text-gray-500"
+          onSubmit={submitFormAndShowCaptcha}
         >
           <fieldset>
             <legend className="text-gold-500 font-bold text-sm md:text-base uppercase tracking-wide pb-10 text-center">
@@ -82,16 +124,26 @@ const Form = () => {
                 required
               />
             </p>
-            <button
-              type="submit"
-              className="inline-flex gap-2 border border-gold-500 rounded-full tracking-widest py-2 px-4 text-gold-500 text-sm md:text-base whitespace-nowrap hover:bg-gold-500 hover:text-white transition-colors duration-300"
-            >
-              <p>Enviar</p>
-              <ArrowIcon cls="w-4 h-4 my-auto" />
-            </button>
+            {showCaptcha ? (
+              <ReCAPTCHA
+                sitekey={"6LdQhpYnAAAAAFx_IDwDh3RxGpA0i4AZWxqgBLw9"}
+                onChange={handleSubmit}
+              />
+            ) : (
+              <button
+                type="submit"
+                className="inline-flex gap-2 border border-gold-500 rounded-full tracking-widest py-2 px-4 text-gold-500 text-sm md:text-base whitespace-nowrap hover:bg-gold-500 hover:text-white transition-colors duration-300"
+                disabled={loading}
+              >
+                <p>Enviar</p>
+                <ArrowIcon cls="w-4 h-4 my-auto" />
+              </button>
+            )}
           </fieldset>
         </form>
       </div>
+
+      <Toaster />
     </article>
   );
 };
