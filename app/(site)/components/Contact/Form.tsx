@@ -17,9 +17,6 @@ const Form = () => {
   const submitFormAndShowCaptcha = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    // clear form
-    e.currentTarget.reset();
-
     // show captcha
     setShowCaptcha(true);
   };
@@ -46,6 +43,12 @@ const Form = () => {
       .then(
         ({ status }) => {
           if (status === 200) {
+            // clear form
+            setName("");
+            setEmail("");
+            setPhone("");
+            setMessage("");
+
             setLoading(false);
 
             toast.success("Mensagem enviada com sucesso!");
