@@ -16,6 +16,11 @@ const Form = () => {
 
   const submitFormAndShowCaptcha = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // clear form
+    e.currentTarget.reset();
+
+    // show captcha
     setShowCaptcha(true);
   };
 
