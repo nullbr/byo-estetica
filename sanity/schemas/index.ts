@@ -1,5 +1,6 @@
-import service from "./service-schema";
+import imagesSchema from "./image-schema";
+import serviceSchema from "./service-schema";
 
-const schemas = [service];
+const schemas = [serviceSchema, imagesSchema];
 
 export default schemas;

@@ -1,6 +1,9 @@
+import { getImage } from "@/sanity/sanity-utils";
 import Image from "next/image";
 
-const AboutHero = () => {
+const AboutHero = async () => {
+  const logo = await getImage("logo-about");
+
   return (
     <section className="bg-gradient-to-b to-[#bfb8ab] from-[#d9dad0]">
       <div className="page-padding">
@@ -21,10 +24,10 @@ const AboutHero = () => {
           </div>
 
           <Image
-            src="/images/about/logo.png"
+            src={logo.url}
             width={300}
             height={300}
-            alt="logo"
+            alt={logo.alt}
             className="w-[300px] h-[300px]"
           />
         </div>

@@ -1,131 +1,31 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
-import { usePathname } from "next/navigation";
-import { CloseIcon, HamburgerIcon } from "../Shared/Icons";
+import Links from "./Links";
+import { getImage } from "@/sanity/sanity-utils";
 
-const Navigation = () => {
-  const pages = [
-    { title: "início", path: "/" },
-    { title: "sobre", path: "/sobre" },
-    { title: "serviços", path: "/servicos" },
-    { title: "contato", path: "/contato" },
-  ];
-
-  // handle menu
-  const [openNav, setOpenNav] = useState(false);
-  const menuRef = useRef<HTMLDivElement>(null);
-  const buttonRef = useRef<HTMLButtonElement>(null);
-
-  useEffect(() => {
-    // return if the sidebar is closed
-    if (!openNav) return;
-
-    const handleClickOutsideSidebar = (event: MouseEvent) => {
-      if (
-        menuRef.current &&
-        !menuRef.current.contains(event.target as Node) &&
-        buttonRef.current &&
-        !buttonRef.current.contains(event.target as Node)
-      ) {
-        setOpenNav(false);
-      }
-    };
-
-    const handleScroll = () => {
-      setOpenNav(false);
-    };
-
-    document.addEventListener("mousedown", handleClickOutsideSidebar);
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      document.removeEventListener("mousedown", handleClickOutsideSidebar);
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, [openNav]);
-
-  // check pathname to set the active link
-  const path = usePathname();
+const Navigation = async () => {
+  const logo = await getImage("logo-nav");
 
   return (
-    <>
-      <nav className="fixed inset-x-0 top-0 z-50 bg-white/500 border-gray-200 backdrop-blur md:py-2">
-        <div className="max-w-3xl flex flex-wrap items-center justify-between mx-auto">
-          {/* logo */}
-          <Link href="/" className="px-6 md:p-4">
-            <Image
-              src="/images/navigation/logo-nav.png"
-              width={74.286}
-              height={25}
-              alt="logo-nav"
-              priority={true}
-            />
-          </Link>
+    <nav className="fixed inset-x-0 top-0 z-40 backdrop-blur md:py-2">
+      <div className="max-w-3xl flex flex-wrap items-center justify-between mx-auto">
+        {/* logo */}
+        <Link href="/" className="px-6 py-4">
+          <Image
+            src={logo.url}
+            width={74.286}
+            height={25}
+            alt={logo.alt}
+            priority={true}
+          />
+        </Link>
 
-          {/* menu button */}
-          <button
-            type="button"
-            ref={buttonRef}
-            className="inline-flex items-center p-2 m-4 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:outline-none hover:ring-2 hover:ring-gray-200"
-            onClick={() => setOpenNav(!openNav)}
-          >
-            <span className="sr-only">Abrir menu</span>
-            {openNav ? (
-              <CloseIcon cls="w-7 h-7" />
-            ) : (
-              <HamburgerIcon cls="w-7 h-7" />
-            )}
-          </button>
-
-          {/* links */}
-          <ul className="hidden md:flex font-medium text-end rounded-lg space-x-8 px-4">
-            {pages.map((page, idx) => (
-              <li key={idx}>
-                <Link
-                  href={page.path}
-                  onClick={() => setOpenNav(false)}
-                  className={`rounded capitalize hover:scale-105 hover:text-green-600 ${
-                    path === page.path ? "text-green-500" : "text-gray-500"
-                  }`}
-                >
-                  {page.title}
-                </Link>
-              </li>
-            ))}
-          </ul>
+        {/* links */}
+        <div className="hidden md:block">
+          <Links />
         </div>
-      </nav>
-
-      <aside
-        ref={menuRef}
-        className={`md:hidden fixed top-0 z-40 w-full transition-transform duration-300 h-[100svh] ${
-          openNav ? "translate-x-0" : "translate-x-full"
-        }`}
-      >
-        <ul className="font-medium flex flex-col text-end p-4 pt-20 border border-gray-100 bg-white h-full">
-          {pages.map((page, idx) => {
-            return (
-              <li key={idx}>
-                <Link
-                  href={page.path}
-                  onClick={() => setOpenNav(false)}
-                  className={`block py-2 pl-3 pr-4 rounded capitalize ${
-                    path === page.path
-                      ? "text-white bg-green-500"
-                      : "text-gray-500"
-                  }`}
-                >
-                  {page.title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </aside>
-    </>
+      </div>
+    </nav>
   );
 };
 export default Navigation;

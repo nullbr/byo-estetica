@@ -1,16 +1,13 @@
+import { getImage, getServices } from "@/sanity/sanity-utils";
 import Image from "next/image";
 import Link from "next/link";
 
-function Footer() {
-  const services = [
-    "Limpeza de Pele",
-    "Microagulhamento",
-    "Ledterapia",
-    "Peeling Químico",
-    "Drenagem Linfática",
-    "Massagem relaxante",
-    "Massagem modeladora",
-  ];
+const Footer = async () => {
+  // get logo
+  const logo = await getImage("logo-nav");
+
+  // services
+  const services = (await getServices()).map((service) => service.title);
 
   return (
     <footer className="page-padding py-20 flex flex-col sm:flex-row gap-6 text-sm sm:text-base text-gray-700 items-center sm:items-start">
@@ -18,8 +15,8 @@ function Footer() {
       <div className="flex-1 flex flex-col gap-4 items-center sm:items-start text-center md:text-left">
         <Link href="/">
           <Image
-            src="/images/navigation/logo-nav.png"
-            alt="footer-logo"
+            src={logo.url}
+            alt={logo.alt}
             width={114.286}
             height={40}
             priority={false}
@@ -104,6 +101,6 @@ function Footer() {
       </Link>
     </footer>
   );
-}
+};
 
 export default Footer;

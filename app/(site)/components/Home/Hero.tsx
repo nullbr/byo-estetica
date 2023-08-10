@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowIcon, InstagramIcon } from "../Shared/Icons";
+import { getImage } from "@/sanity/sanity-utils";
 
-function Hero() {
+const Hero = async () => {
+  // get logo
+  const logo = await getImage("logo-hero");
+
   return (
     <section className="bg-gradient-to-tl from-green-100 via-slate-100 to-blue-200 pb-[5.5rem]">
       <div className="min-h-[100svh] w-full flex justify-center text-center flex-col md:flex-row py-36 md:py-20">
@@ -10,10 +14,10 @@ function Hero() {
           {/* hero section */}
           <div className="animate-fade-in flex flex-col text-gray-400 justify-center text-center h-full px-10 gap-10">
             <Image
-              src="/images/home/hero-logo.png"
+              src={logo.url}
               height={400}
               width={400}
-              alt="text_bg"
+              alt={logo.alt}
               className="w-auto h-auto max-w-[80%] md:max-w-full mx-auto"
               priority={true}
             />
@@ -49,6 +53,6 @@ function Hero() {
       </div>
     </section>
   );
-}
+};
 
 export default Hero;

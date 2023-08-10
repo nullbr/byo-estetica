@@ -6,6 +6,7 @@ import { Analytics } from "./components/Layout/Analytics";
 import Navigation from "./components/Layout/Navigation";
 import Footer from "./components/Layout/Footer";
 import FloatingButton from "./components/Layout/FloatingButton";
+import MobileNav from "./components/Layout/MobileNav";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,18 +25,18 @@ export const metadata: Metadata = {
   },
   description:
     "Clínica BYO Estética avançada é uma empresa prestadora de serviços que oferece tratamentos rápidos ou terapêuticos que objetivam a reabilitação ou melhora estética e da saúde dos clientes, por meio da aplicação de cosméticos e de terapias diversas",
-  metadataBase: new URL("https://byo-estetica.vercel.app/"),
+  metadataBase: new URL("https://byoestetica.com.br/"),
   openGraph: {
     title: "BYO Estética Avançada",
     description:
       "Clínica BYO Estética avançada é uma empresa prestadora de serviços que oferece tratamentos rápidos ou terapêuticos que objetivam a reabilitação ou melhora estética e da saúde dos clientes, por meio da aplicação de cosméticos e de terapias diversas",
-    url: "https://byo-estetica.vercel.app",
-    siteName: "byo-estetica.vercel.app",
+    url: "https://byoestetica.com.br",
+    siteName: "byoestetica.com.br",
     images: [
       {
-        url: "https://byo-estetica.vercel.app/og.png",
-        width: 1920,
-        height: 1080,
+        url: "https://byoestetica.com.br/og.png",
+        width: 1333,
+        height: 1333,
       },
     ],
     type: "website",
@@ -77,6 +78,7 @@ export default function RootLayout({
         }`}
       >
         <Navigation />
+        <MobileNav />
 
         <main>{children}</main>
 

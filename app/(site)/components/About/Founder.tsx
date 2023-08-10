@@ -1,6 +1,9 @@
+import { getImage } from "@/sanity/sanity-utils";
 import Image from "next/image";
 
-const Founder = () => {
+const Founder = async () => {
+  const image = await getImage("logo-founder");
+
   return (
     <section className="bg-orange-200 pt-36 pb-20">
       <div className="page-padding flex flex-col md:flex-row justify-center md:justify-between items-center gap-4">
@@ -18,8 +21,8 @@ const Founder = () => {
           </p>
         </div>
         <Image
-          src="/images/about/paloma.png"
-          alt="sobre-nos"
+          src={image.url}
+          alt={image.alt}
           width={300}
           height={300}
           className="rounded-xl shadow-xl"

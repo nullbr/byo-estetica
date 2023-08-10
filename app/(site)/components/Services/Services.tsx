@@ -7,8 +7,6 @@ const Services = async () => {
   // get services from sanity
   const services = await getServices();
 
-  console.log(services);
-
   return (
     <section className="min-h-screen bg-white text-gray-600">
       <div className="page-padding pt-44">
