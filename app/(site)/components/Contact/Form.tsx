@@ -126,7 +126,7 @@ const Form = () => {
             </p>
             {showCaptcha ? (
               <ReCAPTCHA
-                sitekey={"6LdQhpYnAAAAAFx_IDwDh3RxGpA0i4AZWxqgBLw9"}
+                sitekey={"6LdQhpYnAAAAAE1myOKSIoU_wNXTQp3ZNQg14nZG"}
                 onChange={handleSubmit}
               />
             ) : (
