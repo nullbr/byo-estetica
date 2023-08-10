@@ -64,7 +64,7 @@ const ContactHero = () => {
             <p className="sr-only">endereço</p>
 
             <Link
-              href="https://goo.gl/maps/oPjnHkFVRnwovuBk8"
+              href="https://goo.gl/maps/jqmogZbR9JhT3hyWA"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:underline text-gray-500"

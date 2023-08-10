@@ -37,7 +37,7 @@ const Footer = async () => {
           </Link>{" "}
           ou nos faça uma visita na{" "}
           <Link
-            href="https://goo.gl/maps/oPjnHkFVRnwovuBk8"
+            href="https://goo.gl/maps/jqmogZbR9JhT3hyWA"
             className="text-green-500 underline"
             rel="noopener noreferrer"
             target="_blank"

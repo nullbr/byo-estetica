@@ -3,7 +3,7 @@ const Map = () => {
     <div className="w-screen">
       <iframe
         title="mapa"
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.289537356052!2d-47.13452582229773!3d-23.52208646015516!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf12ac1078e4d7%3A0x79fc4dd020ddf4a6!2sAv.%20Bandeirantes%2C%20417%20-%20Jardim%20Bandeirantes%2C%20S%C3%A3o%20Roque%20-%20SP%2C%2018134-220!5e0!3m2!1sen!2sbr!4v1691607776211!5m2!1sen!2sbr"
+        src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14633.155121257032!2d-47.1319596!3d-23.5221137!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cf130dbc0be17f%3A0xf828aa877cefa63d!2sBYO%20Est%C3%A9tica%20Avan%C3%A7ada!5e0!3m2!1sen!2sbr!4v1691675891508!5m2!1sen!2sbr"
         style={{
           width: "100%",
           height: "30rem",
