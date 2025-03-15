@@ -44,7 +44,7 @@ const Form = () => {
     };
 
     emailjs
-      .send("service_bvhqapb", "template_gyweosm", params, "ueUa3HtzP6zaHrXLB")
+      .send("service_0tg1zv9", "template_gyweosm", params, "ueUa3HtzP6zaHrXLB")
       .then(
         ({ status }) => {
           if (status === 200) {
