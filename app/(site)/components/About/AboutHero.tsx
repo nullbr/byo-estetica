@@ -19,7 +19,7 @@ const AboutHero = async () => {
               tratamentos rápidos e terapêuticos que visam aprimorar tanto sua
               aparência quanto sua saúde. Utilizando uma variedade de cosméticos
               e terapias cuidadosamente selecionados, estamos aqui para ajudar
-              você a se sentir incrível por dentro e por fora. HELLO WORLD!
+              você a se sentir incrível por dentro e por fora.
             </p>
           </div>
 
