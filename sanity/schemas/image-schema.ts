@@ -5,29 +5,16 @@ export default defineType({
   title: "Imagens",
   type: "document",
   fields: [
-    defineField({
-      name: "title",
-      title: "Título",
-      type: "string",
-    }),
+    defineField({ name: "title", title: "Título", type: "string" }),
     defineField({
       name: "image",
       title: "Imagem",
       type: "image",
       options: { hotspot: true },
-      fields: [
-        {
-          name: "alt",
-          title: "Alt",
-          type: "string",
-        },
-      ],
+      // Move the 'alt' field outside of the image field
     }),
-    defineField({
-      name: "description",
-      title: "Descrição",
-      type: "text",
-    }),
+    defineField({ name: "alt", title: "Texto alternativo", type: "string" }),
+    defineField({ name: "description", title: "Descrição", type: "text" }),
     defineField({
       name: "name",
       title: "Nome (Não é alterar)",
