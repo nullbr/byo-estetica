@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { pdfjs, Document, Page } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
 import "react-pdf/dist/esm/Page/TextLayer.css";
@@ -21,6 +21,20 @@ interface DocumentLoadSuccess {
 
 const PDFViewer: React.FC<PDFViewerProps> = ({ url }) => {
   const [numPages, setNumPages] = useState<number | null>(null);
+  const [width, setWidth] = useState<number>(1200); // Default width
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    function updateWidth() {
+      if (containerRef.current) {
+        setWidth(containerRef.current.clientWidth);
+      }
+    }
+
+    updateWidth();
+    window.addEventListener("resize", updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
+  }, []);
 
   function onDocumentLoadSuccess({ numPages }: DocumentLoadSuccess) {
     setNumPages(numPages);
@@ -31,7 +45,7 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ url }) => {
   }
 
   return (
-    <div className="PDF-container flex items-center justify-center">
+    <div ref={containerRef} className="flex items-center justify-center w-full">
       <Document
         file={url}
         onLoadSuccess={onDocumentLoadSuccess}
@@ -47,13 +61,8 @@ const PDFViewer: React.FC<PDFViewerProps> = ({ url }) => {
       >
         {numPages &&
           Array.from({ length: numPages }, (_, index) => (
-            <div key={`page_${index + 1}`}>
-              <Page
-                pageNumber={index + 1}
-                loading={"Loading page"}
-                scale={1.7}
-              />
-              <br />
+            <div key={`page_${index + 1}`} className="w-full">
+              <Page pageNumber={index + 1} width={width} />
             </div>
           ))}
       </Document>
