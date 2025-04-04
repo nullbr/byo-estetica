@@ -11,7 +11,7 @@ const Services = async () => {
   return (
     <section className="min-h-screen bg-white text-gray-600">
       <div className="page-padding pt-44">
-        <PDFViewer url="/sample.pdf" />
+        {/* <PDFViewer url="/sample.pdf" /> */}
         <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
           <h1 className="text-2xl font-thin">Principais serviços oferecidos</h1>
           <Link
