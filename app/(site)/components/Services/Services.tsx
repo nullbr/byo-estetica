@@ -1,12 +1,12 @@
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowIcon } from "../Shared/Icons";
-import { getServices } from "@/sanity/sanity-utils";
+// import Image from "next/image";
+// import Link from "next/link";
+// import { ArrowIcon } from "../Shared/Icons";
+// import { getServices } from "@/sanity/sanity-utils";
 import PDFViewer from "../Shared/PDFViewer";
 
 const Services = async () => {
   // get services from sanity
-  const services = await getServices();
+  // const services = await getServices();
 
   return (
     <section className="min-h-screen bg-white text-gray-600">
