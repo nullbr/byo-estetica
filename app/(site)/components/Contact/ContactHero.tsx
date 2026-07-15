@@ -14,7 +14,7 @@ const ContactHero = () => {
           contate-nos
         </h1>
         <p className="text-lg md:text-xl">
-          Teste Se você está procurando um lugar para cuidar da sua beleza e
+          Se você está procurando um lugar para cuidar da sua beleza e
           bem-estar, o BYO Estética Avançada é a escolha perfeita! Entre em
           contato conosco para agendar uma consulta ou para obter mais
           informações sobre nossos serviços.
